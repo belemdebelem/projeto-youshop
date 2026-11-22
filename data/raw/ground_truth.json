@@ -1,0 +1,770 @@
+[
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00001",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00002",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00003",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00004",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00005",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00006",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00007",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00008",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00009",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00010",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00011",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00012",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00013",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00014",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00015",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00016",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00017",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00018",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00019",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00020",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00021",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00022",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00023",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00024",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00025",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00026",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00027",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00028",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00029",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00030",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00031",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00032",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00033",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00034",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00035",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00036",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00037",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00038",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00039",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00040",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00041",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00042",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00043",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00044",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00045",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00046",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00047",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00048",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00049",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00050",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00051",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00052",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00053",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00054",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00055",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00056",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00057",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00058",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00059",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00060",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00061",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00062",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00063",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00064",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00065",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00066",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00067",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00068",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00069",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00070",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00071",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00072",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00073",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00074",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00075",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00076",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00077",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00078",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00079",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00080",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00081",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00082",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00083",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00084",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00085",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00086",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00087",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00088",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00089",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00090",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00091",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00092",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00093",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00094",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00095",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00096",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00097",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00098",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00099",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00100",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00101",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00102",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00103",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00104",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00105",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00106",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00107",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00108",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00109",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00110",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00111",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00112",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00113",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00114",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00115",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00116",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00117",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00118",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00119",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00120",
+    "scenario": "normal",
+    "expected_issue": null
+  },
+  {
+    "entity_type": "payment",
+    "entity_id": "PAY_00006",
+    "scenario": "amount_mismatch",
+    "expected_issue": "R1_amount_mismatch"
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_00011",
+    "scenario": "missing_payment",
+    "expected_issue": "R1_missing_payment"
+  },
+  {
+    "entity_type": "payment",
+    "entity_id": "PAY_DUP_0001",
+    "scenario": "duplicate_payment",
+    "expected_issue": "R1_duplicate_payment"
+  },
+  {
+    "entity_type": "commission",
+    "entity_id": "COM_00016",
+    "scenario": "commission_mismatch",
+    "expected_issue": "R2_commission_mismatch"
+  },
+  {
+    "entity_type": "payout_expected",
+    "entity_id": "SAL_00016",
+    "scenario": "missing_payout",
+    "expected_issue": "R3_missing_payout"
+  },
+  {
+    "entity_type": "refund",
+    "entity_id": "EVT_ORPH_0001",
+    "scenario": "orphan_event",
+    "expected_issue": "R4_orphan_event"
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_ANOM_0001",
+    "scenario": "statistical_anomaly",
+    "expected_issue": "ANOM_high_amount"
+  },
+  {
+    "entity_type": "sale",
+    "entity_id": "SAL_BAD_0001",
+    "scenario": "invalid_record",
+    "expected_issue": "R5_invalid"
+  }
+]

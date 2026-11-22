@@ -1,0 +1,2 @@
+event_id,sale_id,payment_id,amount,event_date,event_type,reason
+EVT_ORPH_0001,SAL_99999,PAY_99999,99.9,2026-02-10,chargeback,orphan_test
