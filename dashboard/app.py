@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -10,8 +11,9 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
-if str(SRC) not in sys.path:
-    sys.path.insert(0, str(SRC))
+for p in (str(SRC), str(ROOT)):
+    if p not in sys.path:
+        sys.path.insert(0, p)
 
 from youshop_finance.config import get_settings
 from youshop_finance.pipeline.run import run_pipeline
@@ -33,12 +35,19 @@ def load_table(sql: str, params: list | None = None) -> pd.DataFrame:
         return pd.DataFrame()
 
 
+def _run_cmd(args: list[str]) -> None:
+    env = os.environ.copy()
+    py_path = env.get("PYTHONPATH", "")
+    env["PYTHONPATH"] = str(SRC) if not py_path else f"{SRC}{os.pathsep}{py_path}"
+    subprocess.check_call(args, cwd=settings.project_root, env=env)
+
+
 def ensure_data() -> str:
     repo.init_schema()
     runs = load_table("SELECT run_id, status, started_at, summary_json FROM audit_runs ORDER BY started_at DESC")
     if runs.empty:
         with st.spinner("Gerando dados sintéticos e executando pipeline..."):
-            subprocess.check_call([sys.executable, "scripts/generate_synthetic_data.py"], cwd=settings.project_root)
+            _run_cmd([sys.executable, "scripts/generate_synthetic_data.py"])
             run_id = run_pipeline()
         st.cache_data.clear()
         return run_id
@@ -48,7 +57,7 @@ def ensure_data() -> str:
 col_a, col_b = st.columns([1, 1])
 with col_a:
     if st.button("Gerar dados e executar pipeline", type="primary"):
-        subprocess.check_call([sys.executable, "scripts/generate_synthetic_data.py"], cwd=settings.project_root)
+        _run_cmd([sys.executable, "scripts/generate_synthetic_data.py"])
         new_run = run_pipeline()
         st.cache_data.clear()
         st.success(f"Pipeline executado: {new_run}")
