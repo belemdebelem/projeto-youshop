@@ -105,6 +105,8 @@ EXPORT_LABELS = {
     "case_briefs.csv": "Baixar resumos (CSV)",
 }
 
+CORES_ROSCA = ["#0D284D", "#334155", "#64748B", "#94A3B8", "#CBD5E1", "#8CE000"]
+
 
 def rotulo(valor: object, mapa: dict[str, str]) -> str:
     texto = str(valor)
@@ -135,6 +137,20 @@ def numero(valor: object) -> str:
         pass
     try:
         return f"{float(valor):.2f}".replace(".", ",")
+    except (TypeError, ValueError):
+        return str(valor)
+
+
+def percentual(valor: object) -> str:
+    if valor is None:
+        return "—"
+    try:
+        if pd.isna(valor):
+            return "—"
+    except (TypeError, ValueError):
+        pass
+    try:
+        return f"{float(valor):.1f}".replace(".", ",") + "%"
     except (TypeError, ValueError):
         return str(valor)
 
@@ -187,6 +203,32 @@ def rotulo_export(nome: str) -> str:
     return EXPORT_LABELS.get(nome, f"Baixar {nome}")
 
 
+def fatias_rosca(contagem: pd.Series) -> list[dict[str, object]]:
+    total = int(contagem.sum())
+    if total <= 0:
+        return []
+    partes = contagem.head(5).copy()
+    if len(contagem) > 5:
+        partes["Outros"] = int(contagem.iloc[5:].sum())
+    inicio = 0.0
+    fatias = []
+    for indice, (status, quantidade) in enumerate(partes.items()):
+        qtd = int(quantidade)
+        fim = inicio + qtd / total * 100
+        fatias.append(
+            {
+                "nome": rotulo(str(status), STATUS_LABELS),
+                "qtd": qtd,
+                "pct": qtd / total * 100,
+                "cor": CORES_ROSCA[indice % len(CORES_ROSCA)],
+                "inicio": inicio,
+                "fim": fim,
+            }
+        )
+        inicio = fim
+    return fatias
+
+
 st.set_page_config(page_title="Radar Financeiro Inteligente", layout="wide")
 st.markdown(
     """
@@ -195,6 +237,50 @@ st.markdown(
       .bloco-dica { font-size: 0.88rem; color: #334155; }
       .id-tecnico { font-size: 0.72rem; color: #64748B; word-break: break-all; }
       div[data-testid="stMetricLabel"] { font-size: 0.85rem; }
+      .prop-numero { font-size: 1.6rem; font-weight: 800; color: #0D284D; }
+      .prop-barra {
+        display: flex; height: 26px; border-radius: 16px; overflow: hidden;
+        background: #E2E8F0; margin: 0.5rem 0;
+      }
+      .prop-ok {
+        background: #0D284D; color: #FFFFFF; font-size: 0.78rem; font-weight: 700;
+        display: flex; align-items: center; justify-content: center;
+      }
+      .prop-risco { background: #8CE000; min-width: 6px; }
+      .prop-rodape {
+        display: flex; justify-content: space-between; gap: 0.5rem;
+        font-size: 0.75rem; color: #334155;
+      }
+      .ponto {
+        display: inline-block; width: 8px; height: 8px;
+        border-radius: 50%; margin-right: 4px;
+      }
+      .ponto.azul { background: #0D284D; }
+      .ponto.verde { background: #8CE000; border: 1px solid #0D284D; }
+      .zoom-titulo {
+        margin-top: 1rem; font-weight: 700; color: #0D284D; font-size: 0.9rem;
+      }
+      .zoom-corpo { display: flex; align-items: center; gap: 1rem; margin-top: 0.6rem; }
+      .rosca {
+        width: 118px; height: 118px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center; flex: 0 0 auto;
+      }
+      .rosca-centro {
+        width: 74px; height: 74px; border-radius: 50%; background: #FFFFFF;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        color: #0D284D;
+      }
+      .rosca-centro strong { font-size: 1.35rem; line-height: 1; }
+      .rosca-centro span { font-size: 0.68rem; }
+      .legenda { flex: 1; display: grid; gap: 0.28rem; }
+      .legenda-linha {
+        display: grid; grid-template-columns: 10px 1fr auto; align-items: center;
+        gap: 0.35rem; font-size: 0.72rem; color: #334155;
+      }
+      .legenda-ponto { width: 8px; height: 8px; border-radius: 2px; }
+      .legenda-nome { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .legenda-valor { font-weight: 700; color: #0D284D; }
+      .zoom-nota { font-size: 0.7rem; color: #64748B; margin-top: 0.6rem; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -299,7 +385,7 @@ k1.metric(
 )
 k2.metric(
     "Conciliação automática",
-    f"{(matched / total_cases * 100):.1f}%" if total_cases else "0%",
+    percentual(matched / total_cases * 100) if total_cases else "0%",
     help="Percentual de itens que não precisaram de investigação.",
 )
 k3.metric(
@@ -372,14 +458,48 @@ with right:
         st.info("Nenhuma divergência nesta execução — todos os itens conciliaram.")
     else:
         contagem = div["reconciliation_status"].value_counts()
-        grafico = pd.DataFrame(
-            {"Casos": contagem.to_numpy()},
-            index=[rotulo(status, STATUS_LABELS) for status in contagem.index],
+        total_divergencias = int(contagem.sum())
+        pct_conciliados = matched / total_cases * 100 if total_cases else 0.0
+        pct_divergentes = 100.0 - pct_conciliados
+        txt_conciliados = percentual(pct_conciliados)
+        txt_divergentes = percentual(pct_divergentes)
+        fatias = fatias_rosca(contagem)
+        gradiente = ", ".join(
+            f'{fatia["cor"]} {float(fatia["inicio"]):.2f}% {float(fatia["fim"]):.2f}%'
+            for fatia in fatias
         )
-        st.bar_chart(grafico, horizontal=True, sort=False, use_container_width=True)
+        legenda = "".join(
+            '<div class="legenda-linha">'
+            f'<span class="legenda-ponto" style="background:{fatia["cor"]}"></span>'
+            f'<span class="legenda-nome" title="{fatia["nome"]}">{fatia["nome"]}</span>'
+            f'<span class="legenda-valor">{fatia["qtd"]} · {percentual(fatia["pct"])}</span>'
+            "</div>"
+            for fatia in fatias
+        )
         st.markdown(
-            '<p class="bloco-dica">Este gráfico mostra apenas os itens que não conciliaram. '
-            "Os itens conciliados aparecem no indicador acima.</p>",
+            f'<div><span class="prop-numero">{txt_conciliados}</span>'
+            " <span>dos itens bateram</span></div>"
+            '<div class="prop-barra">'
+            f'<div class="prop-ok" style="width:{pct_conciliados:.2f}%">'
+            f"{txt_conciliados}</div>"
+            f'<div class="prop-risco" style="width:{pct_divergentes:.2f}%"></div>'
+            "</div>"
+            '<div class="prop-rodape">'
+            f'<span><span class="ponto azul"></span>{matched} conciliados</span>'
+            f'<span><span class="ponto verde"></span>{total_divergencias} divergências · '
+            f"{txt_divergentes}</span>"
+            "</div>"
+            f'<div class="zoom-titulo">Ampliando os {txt_divergentes}: '
+            f"{total_divergencias} itens que não bateram</div>"
+            '<div class="zoom-corpo">'
+            f'<div class="rosca" style="background:conic-gradient({gradiente})">'
+            '<div class="rosca-centro">'
+            f"<strong>{total_divergencias}</strong><span>casos</span>"
+            "</div></div>"
+            f'<div class="legenda">{legenda}</div>'
+            "</div>"
+            '<p class="zoom-nota">Na rosca, o tamanho das fatias é dentro do grupo de '
+            "divergências — não do total de itens.</p>",
             unsafe_allow_html=True,
         )
 
