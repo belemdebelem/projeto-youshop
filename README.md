@@ -53,6 +53,10 @@ PYTHONPATH=src python scripts/run_pipeline.py
 ```
 
 ### 4) Abrir dashboard
+
+- **App publicado:** [projeto-youshop.streamlit.app](https://projeto-youshop.streamlit.app/)
+- **Execução local:** depois de iniciar o servidor, acesse [http://localhost:8501](http://localhost:8501).
+
 ```bash
 PYTHONPATH=src streamlit run dashboard/app.py
 ```
